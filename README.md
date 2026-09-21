@@ -12,13 +12,14 @@ color from every display when you are.
 brew install --cask aarushkandukoori/tap/grayout
 ```
 
-Grayout is not notarized by Apple yet, so Homebrew's quarantine flag will make
-macOS refuse the first launch. Either install without it:
+Grayout is not notarized by Apple yet, so macOS refuses the first launch. Open
+it once and click **Open Anyway** in System Settings > Privacy & Security, or
+clear the download flag yourself:
 
 ```bash
-brew install --cask --no-quarantine aarushkandukoori/tap/grayout
+xattr -dr com.apple.quarantine /Applications/Grayout.app
 ```
 
-or launch once and click **Open Anyway** in System Settings > Privacy &
-Security. The [install page](https://aarushkandukoori.github.io/grayout/install.html)
-walks through it.
+The [install page](https://aarushkandukoori.github.io/grayout/install.html)
+walks through both. (Homebrew 6 removed `--no-quarantine`, so that flag no
+longer works.)

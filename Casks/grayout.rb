@@ -10,8 +10,8 @@ cask "grayout" do
   desc "Turns the screen gray when an AI judges you clearly off task"
   homepage "https://aarushkandukoori.github.io/grayout/"
 
-  # The app is ad-hoc signed, not notarized, so Gatekeeper still asks once.
-  # Install with --no-quarantine to skip that, or use Open Anyway.
+  # The app is ad-hoc signed, not notarized, so Gatekeeper asks once on the
+  # first launch. See the caveats below.
   depends_on macos: :ventura
 
   app "Grayout.app"
@@ -27,7 +27,10 @@ cask "grayout" do
     Grayout runs on your own Anthropic or OpenAI API key and needs Screen
     Recording permission. Its welcome window walks through both.
 
-    It is not notarized yet: if macOS says it cannot verify the app, open
-    System Settings > Privacy & Security and click Open Anyway.
+    It is not notarized yet. On the first launch macOS will say it cannot
+    verify the app: click Done, then open System Settings > Privacy & Security
+    and click Open Anyway. To skip that, run
+
+      xattr -dr com.apple.quarantine /Applications/Grayout.app
   EOS
 end
