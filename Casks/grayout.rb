@@ -5,15 +5,14 @@ cask "grayout" do
   sha256 arm:   "203f163bdd097fa4c28bc25a168e3d6259ac3e421adb2d4c37c710b893eb2ec4",
          intel: "58130ce4ba29d73de760891f66834cb68bf188bf3f58e8b2556f28a7d6516617"
 
-  url "https://github.com/aarushkandukoori/grayout/releases/download/v#{version}/Grayout-#{arch}.dmg",
-      verified: "github.com/aarushkandukoori/grayout/"
+  url "https://github.com/aarushkandukoori/grayout/releases/download/v#{version}/Grayout-#{arch}.dmg"
   name "Grayout"
   desc "Turns the screen gray when an AI judges you clearly off task"
   homepage "https://aarushkandukoori.github.io/grayout/"
 
   # The app is ad-hoc signed, not notarized, so Gatekeeper still asks once.
   # Install with --no-quarantine to skip that, or use Open Anyway.
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Grayout.app"
 
