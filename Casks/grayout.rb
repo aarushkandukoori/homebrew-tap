@@ -1,9 +1,9 @@
 cask "grayout" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.0"
-  sha256 arm:   "203f163bdd097fa4c28bc25a168e3d6259ac3e421adb2d4c37c710b893eb2ec4",
-         intel: "58130ce4ba29d73de760891f66834cb68bf188bf3f58e8b2556f28a7d6516617"
+  version "1.0.1"
+  sha256 arm:   "d935393c32f7834b41e21d7d1bfd7c92d5d57c01e8f50eefcb2f0d9b1b4b2c33",
+         intel: "b6b60fc472ba176271c633feb311e41bd88850ffbec1f57c924988da99dc93be"
 
   url "https://github.com/aarushkandukoori/grayout/releases/download/v#{version}/Grayout-#{arch}.dmg"
   name "Grayout"
